@@ -1,0 +1,11 @@
+﻿@model Product
+
+<div class="w3-col col-xs-12 col-sm-6 col-md-6 col-lg-3">
+    <div class="w3-container text-center">
+        <div class="w3-display-container">
+            <img src="@Model.Img" style="width:100%">
+        </div>
+        <p style="padding-top: 20px; font-size: 1.2rem;"><b>@Model.Name<br>@Model.Description<br>@Model.Price.ToString("c")</b></p>
+        <p style="padding-top: 20px; font-size: 1.2rem;"><a class="btn btn-warning" asp-controller="ShopCart" asp-action="addToCart" asp-route-id="@Model.Id">Add to Bucket</a></p>
+    </div>
+</div>

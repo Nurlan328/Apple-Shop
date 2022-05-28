@@ -1,0 +1,17 @@
+﻿@model ShopCartViewModel
+
+<div class = "container">
+	<div class="text-center" style="font-size: 1.5rem !important;"><b>@ViewBag.Title</b></div>
+	@foreach (var el in Model.shopCart.listShopCartItems) {
+		<div class = "alert alert-warning mt-3">
+			<b>Product: </b>@el.Product.Name<br />
+			<b>Price </b>@el.Product.Price.ToString("d") ТГ
+		</div>
+	}
+	<hr />
+	<div><a class="btn btn-danger" style="margin-left: 93%; padding: 5px 20px;
+			asp-controller="Order" asp-controller="Order" asp-action="Checkout">Pay</a></div>
+	
+	<br /><br /><br />
+</div>
+

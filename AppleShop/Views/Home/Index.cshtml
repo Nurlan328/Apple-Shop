@@ -1,0 +1,12 @@
+﻿@model HomeViewModel
+
+<div class="text-center" style="font-size: 1.5rem !important;"><b>@ViewBag.Title</b></div>
+<div class="row" style="padding: 4% 0 2%;">
+@{
+	foreach(var favProduct in Model.favProducts)
+	{
+		@Html.Partial("AllProducts", favProduct)
+	}
+}
+</div>
+
